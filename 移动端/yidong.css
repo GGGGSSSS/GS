@@ -1,0 +1,230 @@
+/* ---------------------全局css----------------*/
+
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: 14px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+input,
+button,
+textarea {
+    border: 0;
+    outline: none;
+    resize: none;
+}
+
+button {
+    background: transparent;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* ---------------------搜索栏----------------*/
+
+.container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 500px;
+    /* background-color: #000; */
+}
+
+header {
+    height: 57px;
+}
+
+.search-index {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 55px;
+    display: flex;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    z-index: 1;
+    /* background: -webkit-linear-gradient(120deg, #ff3324, #f55a01);
+    background: -webkit-linear-gradient(120deg, #ff3324, #f55a01); */
+    background: url(images/searchbg.png) no-repeat;
+    background-size: 100%;
+    /* align-items: center; */
+    box-shadow: 0 0 2px 1px #bdbdbd;
+    border-radius: 0 0 3px 3px;
+    /* background: -moz-linear-gradient(right, #DDDDDD, #646464);
+    background: -o-linear-gradient(right, #DDDDDD, #646464); */
+}
+
+.search {
+    flex: 1;
+    height: 34px;
+    border-radius: 17px;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 2px 1px #bdbdbd;
+}
+
+.search::before {
+    content: "";
+    display: block;
+    margin: 6px 0 0 20px;
+    width: 19px;
+    height: 20px;
+    background: url(images/search.png) no-repeat;
+    background-size: 100%;
+}
+
+
+/* .fenlei {
+    height: 30px;
+    width: 15%;
+    background-color: rgb(56, 138, 245);
+    border-radius: 15px;
+} */
+
+.sao {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+    /* background-color: #000; */
+    text-align: center;
+    margin: 5px 5px 0 0;
+}
+
+.sao::before {
+    content: "";
+    display: block;
+    height: 25px;
+    width: 32px;
+    background: url(images/sao.png) no-repeat;
+    background-size: 100%;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+
+/* ----------------轮播图---------------- */
+
+.banner {
+    width: 94%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 8px;
+    box-shadow: 0 0 3px 1px #bdbdbd;
+}
+
+.banner ul:first-child {
+    width: 500%;
+    margin-left: -100%;
+}
+
+.banner ul:first-child li {
+    width: 20%;
+    float: left;
+}
+
+.banner ul:first-child li a {
+    width: 100%;
+    display: block;
+}
+
+.banner ul:first-child li a img {
+    width: 100%;
+    display: block;
+}
+
+.banner ul{
+    display: flex;
+    justify-content: space-around;
+}
+.banner ul:last-child {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+}
+
+.banner ul:last-child li {
+    width: 6px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, .8);
+    /* float: left; */
+    margin-left: 8px;
+    /* opacity: 20%; */
+}
+
+.banner ul:last-child li:first-child {
+    margin-left: 0;
+}
+
+.now {
+    transform: scaleX(1.8)!important;
+    background-color: #fff!important;
+}
+
+
+/* -------------导航栏------------------- */
+
+.nav {
+    width: 100%;
+}
+
+.nav ul {
+    width: 100%;
+    padding: 2px 0;
+}
+
+.nav ul li {
+    width: 20%;
+    float: left;
+}
+
+.nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.nav ul li a img {
+    width: 80px;
+    height: 62px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav ul li a p {
+    color: #666666;
+    font-size: 12px;
+    padding: 5px 0;
+    text-align: center;
+}

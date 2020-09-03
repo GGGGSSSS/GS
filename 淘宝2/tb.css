@@ -1,0 +1,465 @@
+/* ------------------全局css-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input,
+button {
+  border: 0;
+  outline: none;
+}
+
+button {
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #fa2727 !important;
+  transition: all 0.1s;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?ol3d2h");
+  src: url("fonts/icomoon.eot?ol3d2h#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?ol3d2h") format("truetype"),
+    url("fonts/icomoon.woff?ol3d2h") format("woff"),
+    url("fonts/icomoon.svg?ol3d2h#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  font-family: "icomoon";
+  font-style: normal;
+}
+.w {
+  width: 1200px !important;
+  margin: 0 auto;
+}
+/* -------------------------顶部导航栏------------------ */
+
+nav {
+  height: 35px;
+  /* border-bottom: #bdbdbd solid 1px; */
+  box-shadow: 0 0 1px 1px #bdbdbd;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+/* .nav>ul {
+    display: flex;
+    align-items: flex-start;
+} */
+
+.nav > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  /* float: left; */
+  width: 90px;
+  margin-right: 30px;
+  position: relative;
+  text-align: start;
+}
+
+.nav a {
+  line-height: 35px;
+  font-size: 17px;
+  text-align: center;
+  width: 90px;
+  color: black;
+}
+
+.nav li ul {
+  position: absolute;
+  display: none;
+  top: 35px;
+  left: -6px;
+  width: 90px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  box-shadow: 0 1px 3px #bdbdbd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.nav li:nth-child(4) ul {
+  left: -13px;
+}
+
+.nav li li {
+  display: block;
+  height: 35px;
+  text-align: center;
+}
+
+.nav li li a {
+  width: 70px;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.nav > ul > li:nth-child(2n)::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -22px;
+  right: -57px;
+  height: 6px;
+  width: 6px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+}
+
+.nav > ul > li:nth-child(2)::after {
+  right: -74px;
+}
+
+.nav > ul > li:nth-child(2n):hover::after {
+  top: -18px;
+  transform: rotate(225deg);
+  transition: all 0.6s;
+}
+
+.xiala1 {
+  margin-left: 35%;
+}
+
+/* -------------------------------图标还有搜索栏 --------------------------------------------*/
+
+.middle {
+  position: relative;
+  height: 170px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 200px;
+  height: 130px;
+  background: url(img/timg.gif) no-repeat center;
+  background-size: 100%;
+  transition: all 0.4s;
+  font-size: 0;
+}
+
+.form {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  width: 700px;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: #bdbdbd 0px 0px 1px 1px;
+}
+
+.form input {
+  padding-left: 10px;
+  width: 462px;
+  height: 52px;
+  border: 1px solid #bdbdbd;
+  font-size: 18px;
+  outline: none;
+  float: left;
+  color: #ccc;
+}
+
+.form button {
+  font-size: 17px;
+  color: #fff;
+  width: 128px;
+  height: 52px;
+  background-color: #ff0000;
+  border-radius: 0 25px 25px 0;
+  float: left;
+  outline: none;
+}
+
+.slide {
+  float: left;
+  background-color: #fff;
+  width: 110px;
+  height: 52px;
+  border: 1px solid #bdbdbd;
+  border-radius: 25px 0 0 25px;
+  padding-left: 16px;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+.slide::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 21px;
+  right: 596px;
+  height: 8px;
+  width: 8px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  transform: rotate(45deg);
+}
+/* .slide:hover::before {
+    top: 25px;
+    transform: rotate(225deg);
+    transition: all 0.6s;
+} */
+.slide ul {
+  list-style: none;
+  display: none;
+  width: 200px;
+  z-index: 2;
+  position: absolute;
+  left: -80px;
+  line-height: 33px;
+  background-color: #fff;
+  border: #bdbdbd 1px solid;
+  box-shadow: #bdbdbd 0 2px 3px;
+  border-radius: 8px;
+}
+
+.slide li {
+  padding-left: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.slide li:hover {
+  padding-left: 20px;
+}
+
+.slide li:hover {
+  background-color: #ddd;
+}
+
+/* .ceshi {
+    width: ;
+    height: 300px;
+}
+
+.ceshi:hover {
+    background: -webkit-linear-gradient(left, #fff, #C0C0C0);
+    background: -moz-linear-gradient(left, #fff, #C0C0C0);
+    background: -ms-linear-gradient(left, #fff, #C0C0C0);
+    background: -o-linear-gradient(left, #fff, #C0C0C0);
+    opacity: 0.5;
+} */
+
+/* ------------------------------广告栏 -------------------------------*/
+
+.banner .w {
+  position: relative;
+}
+.banner .img {
+  width: 900px;
+}
+
+.img li {
+  width: 100%;
+  display: none;
+}
+
+.img img {
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 0 2px 1px #bdbdbd;
+}
+
+.img .aa {
+  display: block;
+}
+
+.banner div button:nth-of-type(1) {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 35px;
+  width: 80px;
+  height: 80px;
+  border-left: 2px solid #242424;
+  border-bottom: 2px solid#242424;
+  transform: rotate(45deg);
+  z-index: 4;
+}
+
+.banner div button:nth-of-type(2) {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 781px;
+  width: 80px;
+  height: 80px;
+  border-left: 2px solid #242424;
+  border-bottom: 2px solid #242424;
+  transform: rotate(225deg);
+  z-index: 4;
+}
+
+section img {
+  display: block;
+  width: 250px;
+  /* height: 100px; */
+  border-radius: 3px;
+  box-shadow: 0 0 2px 1px #bdbdbd;
+}
+
+section:nth-of-type(1) img {
+  position: absolute;
+  height: 190px;
+  left: 950px;
+  top: 0px;
+}
+
+section:nth-of-type(2) img {
+  position: absolute;
+  height: 190px;
+  left: 950px;
+  top: 210px;
+}
+/* -------------------猜你喜欢-------------------------- */
+.recommend {
+  height: 160px;
+  margin-top: 30px;
+}
+.recom-hd {
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  padding-left: 18px;
+  font-weight: 700;
+  /* text-align: center; */
+}
+.recom-bd {
+  height: 320px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.recom-bd a {
+  display: block;
+  width: 19%;
+}
+.recom-bd a:hover {
+  color: black !important;
+}
+
+.recom-bd a ul img {
+  width: 100%;
+}
+
+.recom-bd a ul div {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fa2727;
+  font-weight: 700;
+}
+.recom-bd li {
+  transition: all 0.3s;
+}
+.recom-bd li:hover {
+  margin-left: -8px;
+}
+
+/* -----------------以下轮播按钮 */
+
+/* .btn {
+    position: absolute;
+    left: 325px;
+    top: 340px;
+    width: 160px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn li {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.btn li:hover {
+    background-color: #242424;
+} */
+
+/* .banner button:nth-of-type(1)::before {
+    z-index: 1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    width: 100px;
+    height: 100px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.banner button:nth-of-type(2)::after {
+    z-index: 1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 170px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(225deg);
+}
+
+.banner button:nth-of-type(1) {
+    position: absolute;
+    width: 10%;
+    height: 400px;
+    opacity: 0;
+}
+
+.banner button:nth-of-type(2) {
+    position: absolute;
+    left: 300px;
+    width: 10%;
+    height: 400px;
+    opacity: 0;
+}
+
+.banner button:nth-of-type(1):hover {
+    background: -webkit-linear-gradient(right, #DDDDDD, #646464);
+    background: -moz-linear-gradient(right, #DDDDDD, #646464);
+    background: -ms-linear-gradient(right, #DDDDDD, #646464);
+    background: -o-linear-gradient(right, #DDDDDD, #646464);
+    opacity: 0.2;
+}
+
+.banner button:nth-of-type(2):hover {
+    background: -webkit-linear-gradient(left, #DDDDDD, #646464);
+    background: -moz-linear-gradient(left, #DDDDDD, #646464);
+    background: -ms-linear-gradient(left, #DDDDDD, #646464);
+    background: -o-linear-gradient(left, #DDDDDD, #646464);
+    opacity: 0.2;
+} */
